@@ -1,5 +1,4 @@
 alert ('hello world!');
 alert ('btfu');
-alert ('eat me');
 alert ('uasya!');
 alert ('suda idi');
