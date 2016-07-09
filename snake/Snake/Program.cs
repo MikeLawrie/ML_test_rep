@@ -31,34 +31,10 @@ namespace Snake
 			
 			Point P4 = new Point(14,15,'&');
 			P4.Draw();
+
+			HorisontalLine line = new HorisontalLine(5,10,8,'+');
+			line.Draw();
 			
-//			List<int> numList = new List<int>();
-//			numList.Add ( 0 );
-//			numList.Add ( 1 );
-//			numList.Add ( 2 );
-//			
-//			int x = numList [ 0 ];
-//			int y = numList [ 1 ];
-//			int z = numList [ 2 ];
-//			
-//			foreach (int i in numList)
-//			{
-//				Console.WriteLine ( i );
-//			}
-			List<Point> pList = new List<Point>();
-			pList.Add(p1);
-			pList.Add(p2);
-			pList.Add(p3);
-			pList.Add(P4);
-			
-			List<char> chList = new List<char>();
-			chList.Add ('a');
-			chList.Add ('b');
-			
-			foreach ( char c in chList)
-			{
-				Console.WriteLine (c);
-			}
 			
 			Console.ReadLine();	
 		}
