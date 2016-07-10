@@ -35,6 +35,9 @@ namespace Snake
 			HorisontalLine line = new HorisontalLine(5,10,8,'+');
 			line.Draw();
 			
+			VerticalLine line2 = new VerticalLine(1,55,8,'@');
+			line2.Draw();
+			
 			
 			Console.ReadLine();	
 		}
