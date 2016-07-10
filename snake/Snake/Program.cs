@@ -29,7 +29,7 @@ namespace Snake
 						rightLine.Draw();
 						
 			// TODO: Implement Functionality Here
-//			Point p1 = new Point(1,3,'*');
+			Point p = new Point(4,5,'*');
 //			p1.Draw();
 
 //
@@ -39,7 +39,9 @@ namespace Snake
 //			VerticalLine line2 = new VerticalLine(1,55,8,'@');
 //			line2.Draw();
 //			
-
+			
+			Snake snake = new Snake(p,4,Direction.RIGHT);
+			
 			
 			
 			Console.ReadLine();	
