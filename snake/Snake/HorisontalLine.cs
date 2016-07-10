@@ -14,9 +14,9 @@ namespace Snake
 	/// <summary>
 	/// Description of HorisontalLine.
 	/// </summary>
-	public class HorisontalLine
+	public class HorisontalLine : Figure
 	{
-		List<Point> pList;
+
 		
 		public HorisontalLine(int xLeft, int xRight, int y, char sym)
 		{
@@ -28,13 +28,7 @@ namespace Snake
 				pList.Add( p );
 			}
 		}
-		public void Draw()
-		{
-			foreach(Point p in pList)
-			{
-				p.Draw();
-			}
-		}
+
 			
 	}
 }
