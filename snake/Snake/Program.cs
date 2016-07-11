@@ -41,7 +41,7 @@ namespace Snake
 //			
 			
 			Snake snake = new Snake(p,4,Direction.RIGHT);
-			
+			snake.Draw();
 			
 			
 			Console.ReadLine();	
