@@ -19,15 +19,11 @@ namespace Snake
 	{
 		public static void Main(string[] args)
 		{
-						Console.SetBufferSize (80, 25);
-						HorisontalLine upLine = new HorisontalLine (0,78,0,'+');
-						upLine.Draw();
-						HorisontalLine downLine = new HorisontalLine (0,78,24,'+');
-						downLine.Draw();
-						VerticalLine leftLine = new VerticalLine (0,24,0,'+');
-						leftLine.Draw();
-						VerticalLine rightLine = new VerticalLine (0,24,78,'+');
-						rightLine.Draw();
+			Console.SetBufferSize( 80, 25 );
+
+			Walls walls = new Walls( 80, 25 );
+			walls.Draw();
+
 						
 			// TODO: Implement Functionality Here
 			Point p = new Point(4,5,'*');
@@ -50,6 +46,10 @@ namespace Snake
 			
 			while (true)
 			{
+				if ( walls.IsHit(snake) || snake.IsHitTail() )
+				{
+					break;
+				}
 				if(snake.Eat( food ) )
 				{
 					food = foodCreator.CreateFood();
@@ -58,11 +58,10 @@ namespace Snake
 				else
 				{
 					snake.Move();
-				}					
+				}
 
 				Thread.Sleep( 100 );
-
-				if (Console.KeyAvailable)
+				if ( Console.KeyAvailable )
 				{
 					ConsoleKeyInfo key = Console.ReadKey();
 					snake.HandleKey( key.Key );
