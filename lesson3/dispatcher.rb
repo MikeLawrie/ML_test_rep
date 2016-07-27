@@ -84,13 +84,12 @@ class Train
     end
   end
 
-  def get_route(tr_route)
-    @tr_route=tr_route
-  end
+#  def get_route(tr_route)
+#    @tr_route=tr_route
+#  end
 
   def move_st
     @cur_st +=1
-
   end
   def show_st
     if cur_st>0  then 
