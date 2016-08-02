@@ -1,15 +1,12 @@
+fibo = []
+fibo[0]=0.to_i
+fibo[1]=1.to_i
 
-fibo=[]
-fibo_cur = 1
+fibo_current = 1
 
-while fibo_cur < 100
-	fibo << fibo_cur
-#	fib = fibo[i-1]+fibo[i-2]
-#	if fib >=100  
-	  fibo_cur= fibo[fibo.size-1]+fibo[fibo.size-2]	
-#	 end
+while fibo_current < 100
+	fibo << fibo_current
+	  fibo_current= fibo[fibo.size-1]+fibo[fibo.size-2]	
 end
-#if fibo.last > 100 
-#	fibo.pop 
-#end
-p fibo
+
+puts fibo

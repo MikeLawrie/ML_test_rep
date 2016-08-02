@@ -1,13 +1,12 @@
-puts "Как зовут?"
+puts "Как Вас зовут?"
 name = gets.chomp
-puts "Какой вес?"
+puts "Каков Ваш вес в кг?"
 waight = gets.to_i
-puts "Какой рост?"
+puts "Какой рост в см?"
 high = gets.to_i
 ideal = high - 110
-if high <= (waight + 110) 
-  puts "#{name}, твой идеальный вес = #{ideal}"
+if ideal <= 0 
+  puts "#{name}, Ваш идеальный вес = #{ideal} кг"
 else  
-  puts "#{name}, твой вес идеален!"
+  puts "#{name}, Ваш вес идеален!"
  end
-# puts high - 5
