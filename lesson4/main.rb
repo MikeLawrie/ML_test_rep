@@ -13,7 +13,7 @@ s1.train_list_type
 s1.train_out(t1)
 s1.train_list
 s1.train_list_type
-r1.station_list
+r1.route_list
 
 t1.speed_up
 t1.train_speed

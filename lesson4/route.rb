@@ -1,22 +1,23 @@
 class Route
-  attr_reader :station_list
+  
+  attr_reader :route_list
 
   def initialize
-    @station_list=[]
+    @route_list=[]
   end 
 
   def show_first_station
-    puts @station_list[0]
+    puts @route_list[0]
   end
   def show_last_station
-    puts @station_list.last
+    puts @route_list.last
   end    
   def add_station(new_station)
 #доработать возможно будут добавлять промежут. станцию
-    @station_list.push(new_station)
+    @route_list.push(new_station)
   end
   def del_station(st_del)
-    @station_list.delete(st_del)
+    @route_list.delete(st_del)
   end
 
 end

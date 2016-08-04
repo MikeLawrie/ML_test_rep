@@ -1,4 +1,5 @@
 class Station
+
   def initialize(station_name)
     @station_name = station_name
     @trains={}
@@ -34,4 +35,5 @@ def receive(train)
       @n_cargo -= 1
     end  
   end
+  
 end
