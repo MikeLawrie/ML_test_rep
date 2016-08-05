@@ -3,17 +3,17 @@ class Station
   def initialize(station_name)
     @station_name = station_name
     @trains={}
-    @n_pass = 0
-    @n_cargo = 0
+    @number_passanger = 0
+    @number_cargo = 0
   end
 
 def receive(train)
   puts "Поезд прибыл"
   @trains={train.train_number => train.train_type}
-  if train.train_type == "pass" then
-      @n_pass += 1
+  if train.train_type == "passanger" then
+      @number_passanger += 1
     elsif train.train_type == "cargo" then
-      @n_cargo += 1
+      @number_cargo += 1
     end
   end
 
@@ -23,16 +23,16 @@ def receive(train)
   end 
 
   def train_list_type
-    puts "На станции #{@station_name} находится #{@n_pass} пассажирских и #{@n_cargo} грузовых поездов" 
+    puts "На станции #{@station_name} находится #{@number_passanger} пассажирских и #{@number_cargo} грузовых поездов" 
   end
 
-  def train_out(train)
+  def departure(train)
      @trains.delete(train.train_number)
      puts "Поезд #{train.train_number} выехал со станции #{@station_name}"
-    if train.train_type == "pass" then
-      @n_pass -= 1
+    if train.train_type == "passanger" then
+      @number_passanger -= 1
     elsif train.train_type == "cargo" then
-      @n_cargo -= 1
+      @number_cargo -= 1
     end  
   end
   
@@ -49,13 +49,15 @@ class Route
   def show_first_station
     puts @route_list[0]
   end
+
   def show_last_station
     puts @route_list.last
-  end    
+  end  
+
   def add_station(new_station)
-#доработать возможно будут добавлять промежут. станцию
     @route_list.push(new_station)
   end
+
   def del_station(st_del)
     @route_list.delete(st_del)
   end
@@ -98,7 +100,7 @@ class Train
   def remove_carrige
     if @train_speed == 0 then
       @number_carriges-=1  
-      puts "От поезда № #train_number отцеплен один вагон}"
+      puts "От поезда № #{train_number} отцеплен один вагон"
     else puts "Поезд должен быть неподвижен"   
     end
   end
